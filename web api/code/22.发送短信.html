@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text"> <button>发送</button>
+    <script>
+        var btn = document.querySelector('button');
+        var time = 5;
+        btn.addEventListener('click', function() {
+            btn.disabled = true; // 禁用按钮
+            var set = setInterval(function() {
+                if (time == 0) {
+                    // 清除定时器和禁用按钮
+                    clearInterval(set);
+                    btn.disabled = false; // 开启按钮
+                    btn.innerHTML = '发送';
+                    time = 5; // 这个5需要从新计算
+                } else {
+                    btn.innerHTML = '还剩下' + time + '秒';
+                    time--;
+                }
+            }, 1000)
+        })
+    </script>
+</body>
+
+</html>

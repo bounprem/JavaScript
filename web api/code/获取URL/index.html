@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        console.log(location.search); // ?uname=Andy
+        // 1. 先出掉？ substr('起始位置',截取几个字符串)
+        var para = location.search.substr(1);
+        console.log(para); // uname=Andy
+        // 2. 利用=把字符串分割成数组 split('=')
+        var arr = para.split('=');
+        console.log(arr); // ["uname", "Andy"]
+        // 3. 把数据写入div中
+        var div = document.querySelector('div');
+        div.innerHTML = arr[1] + '欢迎你';
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1.1-100之间的平均值
+        var sum = 0;
+        var avarage = 0;
+        for (var i = 0; i <= 100; i++) {
+            sum = sum + i;
+        }
+        avarage = sum / 100;
+        console.log(avarage);
+        //2. 1-100所有偶数和奇数的和
+        var even = 0;
+        var odd = 0;
+        for (var i = 0; i <= 100; i++) {
+            if (i % 2 == 0) {
+                even = even + i;
+            } else {
+                odd = odd + i;
+            }
+        }
+        console.log('偶数：' + even);
+        console.log('奇数：' + odd);
+        // 3. 1-100能被3整除的数字的和
+        var sum = 0;
+        for (var i = 0; i <= 100; i++) {
+            if (i % 3 == 0) {
+                sum = sum + i;
+            }
+        }
+        console.log(sum);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        body {
+            background: url(images/1.jpg)no-repeat;
+        }
+        
+        .baidu {
+            overflow: hidden;
+            width: 420px;
+            margin: 100px auto;
+            padding-top: 3px;
+            background-color: #fff;
+        }
+        
+        .baidu img {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="baidu">
+        <il><img src="images/1.jpg" alt=""></il>
+        <il><img src="images/2.jpg" alt=""></il>
+        <il><img src="images/3.jpg" alt=""></il>
+        <il><img src="images/4.jpg" alt=""></il>
+    </ul>
+    <script>
+        var imgs = document.querySelector('.baidu').querySelectorAll('img');
+        // 利用for循环
+        for (var i = 0; i < imgs.length; i++) {
+            imgs[i].onclick = function() {
+                // this.src可以得到当前图片的路径
+                // console.log(this.src);
+                // 要切换body页面的图片就把this.src给body
+                document.body.style.backgroundImage = 'url(' + this.src + ')';
+            }
+        }
+		// 2. 下面复选框需要全部选中， 上面全选才能选中做法： 给下面所有复选框绑定点击事件，每次点击，都要循环查看下面所有的复选框是否有没选中的，如果有一个没选中的， 上面全选就不选中。
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
+    <button>按钮4</button>
+    <button>按钮5</button>
+    <script>
+        var btn = document.getElementsByTagName('button');
+        for (var i = 0; i < btn.length; i++) {
+            btn[i].onclick = function() {
+                // 1. 先把所有按钮背景颜色去掉
+                for (var i = 0; i < btn.length; i++) {
+                    btn[i].style.backgroundColor = '';
+                }
+                // 2. 然后再给当前的背景颜色
+                this.style.backgroundColor = 'pink';
+            }
+        }
+    </script>
+</body>
+
+</html>

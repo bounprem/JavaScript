@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: relative;
+            width: 400px;
+            border-bottom: 1px solid red;
+            margin: 100px auto;
+        }
+        
+        .box input {
+            width: 370px;
+            height: 30px;
+            border: 0;
+            outline: none;
+        }
+        
+        .box img {
+            position: absolute;
+            top: 16px;
+            right: 2px;
+            width: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <label for="">
+            <img src="images/close.png" alt="" id="eye">
+        </label>
+        <input type="password" name="" id="psw">
+    </div>
+	<script>
+	    var eye = document.getElementById('eye');
+	    var psw = document.getElementById('psw');
+	    var flag = 0;
+	    eye.onclick = function() {
+	        // 点击一次后 flag 要发生变化
+	        if (flag == 0) {
+	            psw.type = 'text'; // 点击眼睛让password变成文本形式
+	            eye.src = 'images/open.png';
+	            flag = 1; // 赋值操作
+	        } else {
+	            psw.type = 'password';
+	            eye.src = 'images/close.png';
+	            flag = 0;
+	        }
+	
+	    }
+	</script>
+</body>
+
+</html>

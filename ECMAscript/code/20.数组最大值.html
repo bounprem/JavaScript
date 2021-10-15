@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 求数组[2,6,1,77,52,25,7]最大值
+        // 声明一个保存变量最大值的max
+        // 默认最大值可以取数组中的第一个元素
+        // 遍历这个数组，把里面每个数组元素和max相比较
+        // 如果这个数组大于max 就把这个数组保存到max里面，否则进行下一轮比较
+        // 最后输出max
+        var arr = [2, 6, 1, 77, 52, 25, 7];
+        var max = arr[0];
+        for (var i = 1; i <= arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        console.log('最大值是：' + max);
+    </script>
+</body>
+
+</html>

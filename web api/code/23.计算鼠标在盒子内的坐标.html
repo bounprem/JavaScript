@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <script>
+        var box = document.querySelector('.box');
+        box.addEventListener('mousemove', function(e) {
+            // 鼠标距页面的距离
+            // console.log(e.pageX);
+            // console.log(e.pageY);
+            // // 盒子距页面的距离
+            // console.log(box.offsetLeft);
+            var x = e.pageX - this.offsetLeft;
+            var y = e.pageY - this.offsetTop;
+            box.innerHTML = 'x的坐标是' + x + 'y的坐标是' + y;
+
+        })
+    </script>
+</body>
+
+</html>
